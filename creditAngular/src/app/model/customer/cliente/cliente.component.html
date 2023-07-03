@@ -1,0 +1,193 @@
+<app-nav-cliente></app-nav-cliente>
+<main style="margin-top: 58px; 	margin-left: 230px">
+  <div class="container pt-4">
+    <div class="card">
+      <div class="card-header bg-info">
+        <h1 class="text-center text-white">Agregando nuevo cliente</h1>
+      </div>
+      <div class="card-body">
+        <form
+          class="was-validated"
+          [formGroup]="form"
+          (ngSubmit)="saveCustomer()"
+        >
+          <!--class="was-validated" (sirve para validar los campos)-->
+          <div class="row">
+            <div class="col">
+              <div class="form-group">
+                <label for="cui">CUI/DPI:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  name="cui"
+                  required
+                  formControlName="cui"
+                  minlength="13"
+                  maxlength="13" 
+                />
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-group">
+                <label for="nombre">Nombres:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  name="nombre"
+                  required
+                  formControlName="nombre"
+                />
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-group">
+                <label for="apellido">Apellidos:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  name="apellido"
+                  required
+                  formControlName="apellido"
+                />
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-group">
+                <label for="fechaNacimiento">Fecha de nacimiento:</label>
+                <input
+                  type="date"
+                  class="form-control"
+                  name="fechaNacimiento"
+                  required
+                  formControlName="fechaNacimiento"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="form-group">
+                <label for="genero">Género:</label>
+                <select
+                  class="form-select"
+                  id="genero"
+                  aria-label="Example select with button addon"
+                  formControlName="genero"
+                  required=""
+                >
+                  <option value="Masculino">Masculino</option>
+                  <option value="Femenino">Femenino</option>
+                </select>
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-group">
+                <label for="estadoCivil">Estado civil:</label>
+                <select
+                  class="form-select"
+                  id="estadoCivil"
+                  aria-label="Example select with button addon"
+                  formControlName="estadoCivil"
+                  required=""
+                >
+                  <option value="1">Casado(a)</option>
+                  <option value="2">Soltero(a)</option>
+                  <option value="3">Unión de hecho(a)</option>
+                  <option value="4">Viudo(a)</option>
+                </select>
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-group">
+                <label for="profesion">Profesión:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  name="profesion"
+                  required
+                  formControlName="profesion"
+                />
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-group">
+                <label for="actividadEconomica">Actividad económica:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  name="actividadEconomica"
+                  required
+                  formControlName="actividadEconomica"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="form-group">
+                <label for="telefono">No. de teléfono:</label>
+                <input
+                  type="tel"
+                  class="form-control"
+                  name="telefono"
+                  formControlName="telefono"
+                />
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-group">
+                <label for="celular">No. de Celular:</label>
+                <input
+                  type="tel"
+                  class="form-control"
+                  name="celular"
+                  maxlength="8"
+                  minlength="8"
+                  formControlName="celular"
+                />
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-group">
+                <label for="address">Dirección:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  name="address"
+                  required
+                  minlength="1"
+                  maxlength="45"
+                  formControlName="address"
+                />
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-group">
+                <label for="email">Correo electrónico:</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  name="email"
+                  required
+                  formControlName="email"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="text-center">
+            <button class="btn btn-warning me-3" type="reset">
+              Borrar datos
+            </button>
+            <button
+              class="btn btn-primary"
+              type="submit"
+              [disabled]="!form.valid"
+            >
+              <i class="far fa-floppy-disk me-3"></i>Guardar
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</main>
