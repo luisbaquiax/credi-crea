@@ -4,6 +4,7 @@
  */
 package com.luisbaquiax.model;
 
+import java.io.Serializable;
 import lombok.*;
 
 /**
@@ -16,9 +17,10 @@ import lombok.*;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Cliente {
+public class Cliente implements Serializable {
 
     private String cui;
+    private String nit;
     private String nombres;
     private String apellidos;
     private String fechaNacimiento;
@@ -32,5 +34,9 @@ public class Cliente {
     private String email;
     private String fechaActualizacion;
     private String estado;
+    private String tipoVivienda;
+    private double ingresos;
+    private double egresos;
+    private double saldo;
 
 }

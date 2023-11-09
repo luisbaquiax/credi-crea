@@ -1,4 +1,5 @@
 export class Cliente {
+  nit!:string;
   cui!: string;
   nombres!: string;
   apellidos!: string;

@@ -11,6 +11,7 @@ export class CustomerService {
 
   constructor() {
     this.cliente = new Cliente();
+    this.cliente.nit = '87520278'
     this.cliente.cui = '12345678';
     this.cliente.nombres = 'Luis Basilio';
     this.cliente.apellidos = 'Baquiax Sic';

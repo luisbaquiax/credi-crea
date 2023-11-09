@@ -12,6 +12,7 @@ import { Router } from '@angular/router';
 export class ClienteComponent implements OnInit {
   cliente!: Cliente;
   form = new FormGroup({
+    nit: new FormControl(),
     cui : new FormControl(),
     nombre: new FormControl(),
     apellido: new FormControl(),
@@ -34,6 +35,7 @@ export class ClienteComponent implements OnInit {
   ngOnInit(): void {}
 
   saveCustomer() {
+    this.cliente.nit = this.form.value.nit;
     this.cliente.cui = this.form.value.cui;
     this.cliente.nombres = this.form.value.nombre;
     this.cliente.apellidos = this.form.value.apellido;

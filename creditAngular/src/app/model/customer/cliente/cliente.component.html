@@ -1,5 +1,5 @@
 <app-nav-cliente></app-nav-cliente>
-<main style="margin-top: 58px; 	margin-left: 230px">
+<main style="margin-top: 58px; margin-left: 230px">
   <div class="container pt-4">
     <div class="card">
       <div class="card-header bg-info">
@@ -15,18 +15,50 @@
           <div class="row">
             <div class="col">
               <div class="form-group">
+                <label for="nit">NIT:</label>
+                <input
+                  type="text"
+                  pattern="[0-9]*"
+                  class="form-control"
+                  name="nit"
+                  required
+                  formControlName="nit"
+                  minlength="13"
+                  maxlength="13"
+                />
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-group">
                 <label for="cui">CUI/DPI:</label>
+                <input
+                  type="text"
+                  pattern="[0-9]*"
+                  class="form-control"
+                  name="cui"
+                  required
+                  formControlName="cui"
+                  minlength="13"
+                  maxlength="13"
+                />
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-group">
+                <label for="cui">Extendida en:</label>
                 <input
                   type="text"
                   class="form-control"
                   name="cui"
                   required
                   formControlName="cui"
-                  minlength="13"
-                  maxlength="13" 
+                  minlength="1"
+                  maxlength="45"
                 />
               </div>
             </div>
+          </div>
+          <div class="row">
             <div class="col">
               <div class="form-group">
                 <label for="nombre">Nombres:</label>
@@ -104,7 +136,6 @@
                   type="text"
                   class="form-control"
                   name="profesion"
-                  required
                   formControlName="profesion"
                 />
               </div>
@@ -116,7 +147,6 @@
                   type="text"
                   class="form-control"
                   name="actividadEconomica"
-                  required
                   formControlName="actividadEconomica"
                 />
               </div>
@@ -127,9 +157,12 @@
               <div class="form-group">
                 <label for="telefono">No. de teléfono:</label>
                 <input
-                  type="tel"
+                  type="text"
+                  pattern="[0-9]*"
                   class="form-control"
                   name="telefono"
+                  maxlength="8"
+                  minlength="8"
                   formControlName="telefono"
                 />
               </div>
@@ -138,7 +171,8 @@
               <div class="form-group">
                 <label for="celular">No. de Celular:</label>
                 <input
-                  type="tel"
+                  type="text"
+                  pattern="[0-9]*"
                   class="form-control"
                   name="celular"
                   maxlength="8"
@@ -168,7 +202,6 @@
                   type="email"
                   class="form-control"
                   name="email"
-                  required
                   formControlName="email"
                 />
               </div>

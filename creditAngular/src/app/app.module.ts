@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CustomerModule } from './model/customer/customer.module';
 import { LoginComponent } from './model/login/login.component';
+import { SolicitudModule } from './model/solicitud/solicitud.module';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { LoginComponent } from './model/login/login.component';
     BrowserModule,
     ReactiveFormsModule,
     AppRoutingModule,
-    CustomerModule
+    CustomerModule,
+    SolicitudModule
   ],
   providers: [],
   bootstrap: [AppComponent]

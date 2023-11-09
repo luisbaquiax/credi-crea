@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SildelbarCustomerComponent } from './sildelbar-customer.component';
+import { SolicitudComponent } from './solicitud.component';
 
-describe('SildelbarCustomerComponent', () => {
-  let component: SildelbarCustomerComponent;
-  let fixture: ComponentFixture<SildelbarCustomerComponent>;
+describe('SolicitudComponent', () => {
+  let component: SolicitudComponent;
+  let fixture: ComponentFixture<SolicitudComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SildelbarCustomerComponent ]
+      declarations: [ SolicitudComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SildelbarCustomerComponent);
+    fixture = TestBed.createComponent(SolicitudComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

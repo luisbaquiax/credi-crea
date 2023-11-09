@@ -29,16 +29,16 @@ public class ReferenciaClienteDB {
     /**
      * Inserta a new Reference of Customer
      *
-     * @param referenica
+     * @param referencia
      * @return
      */
-    public boolean insert(ReferenciaCliente referenica) {
+    public boolean insert(ReferenciaCliente referencia) {
         try (PreparedStatement statement = ConeccionDB.getConnection().prepareStatement(INSERT)) {
-            statement.setString(1, referenica.getNombres());
-            statement.setString(2, referenica.getApellidos());
-            statement.setString(3, referenica.getTelefono());
-            statement.setString(4, referenica.getCliente());
-            statement.setString(5, referenica.getTipo());
+            statement.setString(1, referencia.getNombres());
+            statement.setString(2, referencia.getApellidos());
+            statement.setString(3, referencia.getTelefono());
+            statement.setString(4, referencia.getCliente());
+            statement.setString(5, referencia.getTipo());
 
             statement.executeUpdate();
             return true;

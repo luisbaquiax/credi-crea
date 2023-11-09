@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { ClienteComponent } from './cliente/cliente.component';
 import { ListCustomerComponent } from './list-customer/list-customer.component';
 import { NavClienteComponent } from './nav-cliente/nav-cliente.component';
-import { SildelbarCustomerComponent } from './sildelbar-customer/sildelbar-customer.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from '../../app-routing.module';
 
@@ -14,7 +13,6 @@ import { AppRoutingModule } from '../../app-routing.module';
     ClienteComponent,
     ListCustomerComponent,
     NavClienteComponent,
-    SildelbarCustomerComponent
   ],
   imports: [
     CommonModule, 

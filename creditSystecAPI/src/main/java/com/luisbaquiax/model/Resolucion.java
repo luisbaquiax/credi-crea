@@ -22,13 +22,18 @@ import lombok.ToString;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class ReferenciaCliente implements Serializable{
+public class Resolucion implements Serializable {
 
-    private int id;
-    private String nombres;
-    private String apellidos;
-    private String telefono;
-    private String cliente;
-    private String tipo;
-
+    private int idSolucion;
+    private double cuotaCapital;
+    private double intereses;
+    private String fechaResolucion;
+    private String modalidadCuotas;
+    private int cantidadDesembolso;
+    private String acta;
+    private double totalPago;
+    private double monto;
+    private String montoLetras;
+    private String garantias;
+    private String comentarios;
 }

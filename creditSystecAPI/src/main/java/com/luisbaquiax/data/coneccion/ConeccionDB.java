@@ -27,11 +27,9 @@ public class ConeccionDB {
 
     public ConeccionDB() throws SQLException {
         try {
-                Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
-          
+            Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
             CONECCION = DriverManager.getConnection(URL, USER, PASSWORD);
             System.out.println("conexion exitosa");
-
         } catch (ClassNotFoundException | InstantiationException | IllegalAccessException ex) {
             Logger.getLogger(ConeccionDB.class.getName()).log(Level.SEVERE, null, ex);
         }
